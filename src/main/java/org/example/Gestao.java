@@ -63,6 +63,8 @@ public class Gestao {
             }
             if (op == 3) imprimeFuncionario(getFuncionario());
 
+            if (op == 4) imprimeVendedor(getVendedor());
+
         } while (op != 5);
 
     }
