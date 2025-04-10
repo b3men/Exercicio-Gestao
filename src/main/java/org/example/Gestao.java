@@ -62,7 +62,6 @@ public class Gestao {
                 JOptionPane.showMessageDialog(null, "Cadastro realizado com sucesso!");
             }
             if (op == 3) imprimeFuncionario(getFuncionario());
-            if (op == 4) imprimeVendedor(getVendedor());
 
         } while (op != 5);
 
