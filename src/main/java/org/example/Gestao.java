@@ -14,12 +14,21 @@ public class Gestao {
         funcionarios.add(f);
     }
     //imprime lista de funcionarios cadastrados
-    public static void imprimeFuncionario(List<Funcionario> funcionarios) {
-        funcionarios = getFuncionario();
-        for (Funcionario funcionario : funcionarios) {
-            JOptionPane.showMessageDialog(null, funcionario.getNome());
+    public static void imprimeFuncionario(ArrayList<Funcionario> funcionarios) {
+        if (funcionarios.isEmpty()) {
+            JOptionPane.showMessageDialog(null, "Nenhum funcionário cadastrado.");
+        } else {
+            StringBuilder mensagem = new StringBuilder("Lista de Funcionários:\n");
+            for (Funcionario f : funcionarios) {
+                mensagem.append(f.getNome())
+                        .append(" - Salário: R$")
+                        .append(f.calculaSalario())
+                        .append("\n");
+            }
+            JOptionPane.showMessageDialog(null, mensagem.toString());
         }
     }
+
 
     // cadastro de vendedores
     static ArrayList<Vendedor> vendedores = new ArrayList<>();
@@ -29,12 +38,21 @@ public class Gestao {
         vendedores.add(v);
     }
     //imprime lista de vendedores cadastrados
-    public static void imprimeVendedor(List<Vendedor> vendedores) {
-        vendedores = getVendedor();
-        for (Vendedor vendedor : vendedores) {
-            JOptionPane.showMessageDialog(null, vendedor.getNome());
+    public static void imprimeVendedor(ArrayList<Vendedor> vendedores) {
+        if (vendedores.isEmpty()) {
+            JOptionPane.showMessageDialog(null, "Nenhum vendedor cadastrado.");
+        } else {
+            StringBuilder mensagem = new StringBuilder("Lista de Vendedores:\n");
+            for (Vendedor v : vendedores) {
+                mensagem.append(v.getNome())
+                        .append(" - Salário: R$")
+                        .append(v.calculaSalario())
+                        .append("\n");
+            }
+            JOptionPane.showMessageDialog(null, mensagem.toString());
         }
     }
+
 
     public static void main(String[] args) {
         int op = 0;
