@@ -74,7 +74,7 @@ public class Gestao {
             if (op == 2) {
                 String nomeVendedor = JOptionPane.showInputDialog(null, "Digite o nome:");
                 double salarioBaseVendedor = Double.parseDouble(JOptionPane.showInputDialog("Digite o salario base:"));
-                double qtdVendas = Double.parseDouble(JOptionPane.showInputDialog("Digite a quantidade de vendas no mês:"));
+                double qtdVendas = Double.parseDouble(JOptionPane.showInputDialog("Digite a quantidade de vendas:"));
                 double valorPorVenda = Double.parseDouble(JOptionPane.showInputDialog("Digite o valor de comissão por venda:"));
                 cadastraVendedor(nomeVendedor, salarioBaseVendedor, qtdVendas, valorPorVenda);
                 JOptionPane.showMessageDialog(null, "Cadastro realizado com sucesso!");
